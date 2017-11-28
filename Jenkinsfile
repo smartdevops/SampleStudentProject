@@ -1,4 +1,4 @@
-env.dockerimagename="devopsbasservice/buildonframework:buildon-jenkinsfile"
+env.dockerimagename="devopsbasservice/buildonframework:buildonJenkinsfile2.0"
 node {
    stage ('BuildOn_Build') {
     checkout scm
