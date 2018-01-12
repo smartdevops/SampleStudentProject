@@ -6,7 +6,7 @@ node {
   } 
    stage ('StudentProject_CodeAnalysis') {
     sh 'mvn sonar:sonar -Dsonar.host.url=http://10.0.0.94:9000 -Dmaven.test.failure.ignore=true -DskipTests=true -Dsonar.sources=src/main/java'
-    sh 'pwd;ls -la ;gate=`./sonar.sh`; if [[ $gate = *OK* ]];then echo OK;else exit 1; fi;'  
+    sh 'pwd;ls -la ;gate=`./sonar.sh`;if [[ $gate = *OK* ]];then echo OK;else echo ERROR; fi;'  
   }
  //Test Buildon  Test github
 }
